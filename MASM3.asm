@@ -14,14 +14,14 @@ main proc
 	jmp l1
 
 	; inside for loop
-	l3:						; needs to be placed here so continues looping
-							; jump back up to l3 until condition is satified
+	l3:					; needs to be placed here so continues looping
+						; jump back up to l3 until condition is satified
 		mov eax, [ebp-4]	
 		add eax, 1			; j = j + i ,where i increments
 		mov [ebp-4], eax 
 
 	l1: 
-		cmp dword ptr [ebp-4], 10 ; i  < 10		if (i < 10)
+		cmp dword ptr [ebp-4], 10 	; i  < 10 - if (i < 10)
 		jge l2		; jump if i > 10, to l2
 
 	mov eax, [ebp-4]
