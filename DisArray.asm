@@ -31,15 +31,15 @@ main PROC
 	; now div
 
 
-						; XOR, MOV ECX, EDX result stored , then store back to [ebp-4]
+				; XOR, MOV ECX, EDX result stored , then store back to [ebp-4]
 	xor edx, edx		; first clear with xor
 	mov ecx, 3
-	div ecx				; stored after here
+	div ecx			; stored after here
 	mov [ebp-8], edx	; result stored in edx
 
 	mov eax, [ebp-8]
 
-	pop eax
+	pop eax		; pop from all stack
 	pop ebx
 	pop ecx
 
